@@ -15,7 +15,8 @@ an extensible method for convering website images to webp.
 
 ## 代码
 
-' --------分离链接orig_path与变体variant--------
+```lua
+--------分离链接orig_path与变体variant--------
 local orig_path, variant = ngx.var.uri:match("^(/photo/.+%.%w+)([!_%-].*)$")
 
 
@@ -73,4 +74,4 @@ if variant == "!2webp" then
 
     os.execute(cmd)
     return ngx.exec(return_path)
-end '
+end
